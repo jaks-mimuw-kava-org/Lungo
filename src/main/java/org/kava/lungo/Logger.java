@@ -51,7 +51,7 @@ public class Logger {
 
     private void log(Level level, String message, Object... args) {
         if (level.isLoggable(this.level)) {
-            String log = String.format("[%s] [%s] [%s] - %s",
+            String log = String.format("[%s] [%s] {%s} - %s",
                     timeSupplier.get().format(DateTimeFormatter.ofPattern(DATE_FORMAT)),
                     level,
                     context,
